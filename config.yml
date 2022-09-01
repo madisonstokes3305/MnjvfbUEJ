@@ -3,7 +3,6 @@ version: 2.1
 jobs:
   test:
     macos:
-      xcode: 13.3.0 
     steps:
       - checkout
       - run: exec ./.github/scripts/test_app.sh
@@ -11,7 +10,6 @@ jobs:
     macos:
       xcode: 13.3.0
     steps: 
-      - checkout
       - run: brew install swiftlint
       - run: swiftlint --strict .
 
